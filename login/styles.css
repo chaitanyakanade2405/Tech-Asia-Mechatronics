@@ -1,0 +1,170 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #fb3c3c, #e6dbdb);
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+form {
+  display: none;
+  padding: 50px;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+form.active {
+  display: block;
+  animation: slideIn 0.5s forwards ease-out;
+}
+
+form.inactive {
+  animation: slideOut 0.5s forwards ease-out;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  font-size: 50px;
+  font-family: Algerian, serif;
+  color: #040303;
+  font-weight: 400;
+  font-style: italic;
+}
+
+form.active h2 {
+  opacity: 1;
+}
+
+/* Placeholder text animation */
+form input[type="text"]::placeholder,
+form input[type="password"]::placeholder,
+form input[type="email"]::placeholder {
+  opacity: 1;
+  color: #888888;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: absolute;
+  left: 20px;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+form input[type="text"]:focus::placeholder,
+form input[type="password"]:focus::placeholder,
+form input[type="email"]:focus::placeholder {
+  opacity: 1;
+  bottom: calc(100% + 10px);
+  transform: translateY(-100%);
+}
+
+/* Adjust input padding for label transition */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 10px 10px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #5d5151;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: left; /* Text alignment left */
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container input[type="password"] {
+  width: calc(100% - 20px);
+}
+
+.toggle-password {
+  position: absolute;
+  top: 22px;
+  right: 2px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+form button {
+  width: 100%;
+  padding: 20px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #c20000;
+  box-shadow: 0 8px 16px rgba(255, 1, 1, 0.2);
+  color: #ffffff;
+}
+
+form button#signup-form-button:hover,
+form button#login-form-button:hover {
+  background-color: #590303;
+}
+
+form p {
+  margin-top: 30px;
+}
+
+form p a {
+  color: #433d3d;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+form p a:hover {
+  text-decoration: underline;
+  color: #fb3c3c;
+}
