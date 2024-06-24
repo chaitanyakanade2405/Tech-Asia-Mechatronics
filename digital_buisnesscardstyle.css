@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #222;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    display:flex;
+    align-items: centre;
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.digital-business-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.digital-business-card h1 {
+    color: #e74c3c;
+}
+
+.business-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.feature {
+    flex: 1 1 30%;
+    max-width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.feature p {
+    margin-top: 10px;
+    color: #333;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.new-section, .pricing-section, .form-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.new-section h2, .pricing-section h2, .form-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.new-section p, .pricing-section ul, .form-section .form-instructions {
+    font-size: 16px;
+    color: #666;
+}
+
+.pricing-section .price {
+    font-size: 32px;
+    color: #333;
+}
+
+.pricing-section hr {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.pricing-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.pricing-section ul li {
+    margin: 5px 0;
+}
+
+.form-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-instructions {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 45%;
+    }
+    .form-container {
+        flex-direction: column;
+    }
+    .form-instructions {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex: 1 1 100%;
+    }
+}
